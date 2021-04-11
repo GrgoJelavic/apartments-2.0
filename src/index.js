@@ -4,12 +4,15 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { ApartmentProvider } from './Context/Context';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
-      <App />
-    </Router>
+    <ApartmentProvider>
+      <Router>
+        <App />
+      </Router>
+    </ApartmentProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

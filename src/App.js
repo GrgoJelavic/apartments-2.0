@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
 
-import Home from './pages/Home';
-import Apartments from './pages/Apartments';
-import Apartment from './pages/Apartment';
-import Contact from './pages/Contact';
-import About from './pages/About';
-import Error from './pages/Error';
+import Home from './pages/HomePage';
+import Apartments from './pages/ApartmentsPage';
+import Apartment from './pages/ApartmentPage';
+import Contact from './pages/ContactPage';
+import About from './pages/AboutPage';
+import Error from './pages/ErrorPage';
 import { Route, Switch } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 
