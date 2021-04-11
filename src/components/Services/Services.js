@@ -12,7 +12,7 @@ export default class Services extends Component {
     services: [
       {
         icon: <FaCity />,
-        title: 'comfortable suites in the city center',
+        title: 'comfortable suites',
         info:
           'Lorem ipsus moment odas da safe, plei asento di mare po ki dinare vici veneto spalato.',
       },
@@ -23,14 +23,14 @@ export default class Services extends Component {
           'Lorem ipsus moment odas da safe, plei asento di mare po ki dinare vici veneto spalato.',
       },
       {
-        icon: <FaUmbrellaBeach />,
-        title: 'explore beachs',
+        icon: <FaSwimmer />,
+        title: 'housekeeping',
         info:
           'Lorem ipsus moment odas da safe, plei asento di mare po ki dinare vici veneto spalato.',
       },
       {
-        icon: <FaSwimmer />,
-        title: 'swimmers swim',
+        icon: <FaUmbrellaBeach />,
+        title: 'beach equipment',
         info:
           'Lorem ipsus moment odas da safe, plei asento di mare po ki dinare vici veneto spalato.',
       },

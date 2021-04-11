@@ -9,7 +9,7 @@
   --offWhite: #f7f7f7;
   --mainBlack: #222;
   --mainGrey: #ececec;
-  --darkGrey: #cfcfcf;
+  --yellow: #e8e1b0;
   --mainTransition: all 0.3s linear;
   --mainSpacing: 3px;
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
@@ -158,17 +158,20 @@ h6 {
     padding: 0.5rem 0;
   }
 }
+.logo {
+  max-width: 60px;
+}
 /* end of navbar */
 /* Hero */
 .defaultHero,
-.roomsHero {
+.apartmentsHero {
   min-height: calc(100vh - 66px);
   background: url('./images/split-1.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.roomsHero {
+.apartmentsHero {
   background-image: url('./images/apartments/pomalo1.jpg');
   min-height: 60vh;
 }
@@ -237,7 +240,7 @@ h6 {
   padding: 5rem 0;
 }
 .services {
-  background: var(--darkGrey);
+  background: var(--yellow);
   text-align: center;
 }
 .services-center {
@@ -256,6 +259,7 @@ h6 {
 }
 .services h6 {
   letter-spacing: var(--mainSpacing);
+  text-transform: capitalize;
 }
 .services p {
   width: 80%;
@@ -274,12 +278,12 @@ h6 {
   }
 }
 /*end of services */
-/* featured rooms */
+/* featured apartments */
 
-.featured-rooms {
+.featured-apartments {
   padding: 5rem 0;
 }
-.featured-rooms-center {
+.featured-apartments-center {
   width: 80vw;
   margin: 0 auto;
   display: grid;
@@ -288,24 +292,24 @@ h6 {
   grid-column-gap: 40px;
 }
 @media screen and (min-width: 776px) {
-  .featured-rooms-center {
+  .featured-apartments-center {
     width: 90vw;
     grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   }
 }
 @media screen and (min-width: 992px) {
-  .featured-rooms-center {
+  .featured-apartments-center {
     width: 95vw;
     max-width: 1170px;
   }
 }
-/* end pf featured rooms */
-/* room */
-.room {
+/* end pf featured apartments */
+/* apartment */
+.apartment {
   box-shadow: var(--lightShadow);
   transition: var(--mainTransition);
 }
-.room:hover {
+.apartment:hover {
   box-shadow: var(--darkShadow);
 }
 
@@ -335,7 +339,7 @@ h6 {
   font-weight: 300;
   letter-spacing: var(--mainSpacing);
 }
-.room-link {
+.apartment-link {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -351,24 +355,28 @@ h6 {
 .img-container:hover .price-top {
   opacity: 0;
 }
-.img-container:hover .room-link {
+.img-container:hover .apartment-link {
   transform: translate(-50%, -50%) scale(1);
 }
-.room-info {
-  background: var(--darkGrey);
+.apartment-info {
+  background: var(--yellow);
   text-transform: capitalize;
   padding: 0.5rem 0;
   text-align: center;
   font-weight: 700;
   letter-spacing: var(--mainSpacing);
 }
-/* end of room  */
-/* single room*/
+/* end of apartment  */
+/* single apartment*/
+.apartment-info p {
+  font-weight: 200;
+  font-size: x-small;
+}
 
-.single-room {
+.single-apartment {
   padding: 5rem 0 0 0;
 }
-.single-room-images {
+.single-apartment-images {
   width: 80vw;
   margin: 0 auto;
   display: grid;
@@ -376,11 +384,11 @@ h6 {
   grid-row-gap: 2rem;
   grid-column-gap: 50px;
 }
-.single-room-images img {
+.single-apartment-images img {
   width: 100%;
   display: block;
 }
-.single-room-info {
+.single-apartment-info {
   width: 80vw;
   display: grid;
   grid-template-columns: 1fr;
@@ -406,11 +414,11 @@ h6 {
 .info h6 {
   font-weight: 300;
 }
-.room-extras {
+.apartment-extras {
   width: 80vw;
   margin: 0 auto 3rem auto;
 }
-.room-extras h6 {
+.apartment-extras h6 {
   text-transform: capitalize;
   letter-spacing: var(--mainSpacing);
 }
@@ -422,13 +430,13 @@ h6 {
   grid-row-gap: 1rem;
 }
 @media screen and (min-width: 992px) {
-  .single-room-images,
-  .single-room-info,
-  .room-extras {
+  .single-apartment-images,
+  .single-apartment-info,
+  .apartment-extras {
     width: 95vw;
     max-width: 1170px;
   }
-  .single-room-info {
+  .single-apartment-info {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 2rem;
@@ -437,12 +445,12 @@ h6 {
     padding-left: 3rem;
   }
 }
-/* end of single room*/
-/* roomlist */
-.roomslist {
+/* end of single apartment*/
+/* apartmentlist */
+.apartmentslist {
   padding: 5rem 0;
 }
-.roomslist-center {
+.apartmentslist-center {
   width: 80vw;
   margin: 0 auto;
   display: grid;
@@ -452,18 +460,18 @@ h6 {
 }
 
 @media screen and (min-width: 776px) {
-  .roomslist-center {
+  .apartmentslist-center {
     width: 90vw;
   }
 }
 @media screen and (min-width: 992px) {
-  .roomslist-center {
+  .apartmentslist-center {
     width: 95vw;
     max-width: 1170px;
   }
 }
-/* end of roomlist */
-/*  rooms fitler*/
+/* end of apartmentlist */
+/*  apartments fitler*/
 .filter-container {
   padding: 5rem 0;
 }
@@ -514,4 +522,4 @@ h6 {
     max-width: 1170px;
   }
 }
-/* end of rooms fitler*/
+/* end of apartments fitler*/
