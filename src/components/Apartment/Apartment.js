@@ -25,7 +25,7 @@ export default function Apartment({ apartment }) {
           <h6>{price}€</h6>
           <p>per night</p>
         </div>
-        <Link to={`/suites/${slug}`} className='btn-primary apartment-link'>
+        <Link to={`/apartments/${slug}`} className='btn-primary apartment-link'>
           Explore
         </Link>
       </div>
@@ -41,7 +41,8 @@ export default function Apartment({ apartment }) {
   );
 }
 
-Apartment.PropType = {
+// eslint-disable-next-line react/no-typos
+Apartment.propTypes = {
   apartment: PropTypes.shape({
     name: PropTypes.string.isRequired,
     slug: PropTypes.string.isRequired,

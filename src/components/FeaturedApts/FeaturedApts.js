@@ -10,7 +10,7 @@ export default class FeaturedApts extends Component {
   render() {
     let { loading, featuredApts: apartments } = this.context;
 
-    console.log(apartments);
+    //console.log(apartments);
 
     apartments = apartments.map((apt) => {
       return <Apartment key={apt.id} apartment={apt} />;

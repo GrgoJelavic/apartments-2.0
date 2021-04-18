@@ -14,8 +14,8 @@ const data = [
     },
     fields: {
       name: `king's view apartment`,
-      slug: 'apartmentKingsView',
-      type: 'family',
+      slug: 'kings-view',
+      type: 'one bedroom',
       price: 45,
       size: 40,
       capacity: 4,
@@ -75,8 +75,8 @@ const data = [
     },
     fields: {
       name: 'apartment pomalo',
-      slug: 'apartmentPomalo',
-      type: 'family',
+      slug: 'pomalo',
+      type: 'family one bedroom',
       price: 50,
       size: 55,
       capacity: 5,
@@ -135,8 +135,8 @@ const data = [
     },
     fields: {
       name: 'bella mare apartment',
-      slug: 'apartmentBellaMare',
-      type: 'presidential',
+      slug: 'bella-mare',
+      type: 'studio',
       price: 40,
       size: 30,
       capacity: 4,
@@ -191,12 +191,73 @@ const data = [
   },
   {
     sys: {
+      id: '4',
+    },
+    fields: {
+      name: 'duplex apartment',
+      slug: 'duplex',
+      type: 'double-studio',
+      price: 80,
+      size: 60,
+      capacity: 8,
+      bedroomsNo: 2,
+      bedsNo: 4,
+      bathsNo: 2,
+      pets: true,
+      breakfast: true,
+      featured: false,
+      description:
+        'Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamcatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.',
+      extras: [
+        'Plush pillows and breathable bed linens',
+        'Soft, oversized bath towels',
+        'Full-sized, pH-balanced toiletries',
+        'Complimentary refreshments',
+        'Adequate safety/security',
+        'Internet',
+        'Comfortable beds',
+      ],
+      images: [
+        {
+          fields: {
+            file: {
+              url: split3,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: split2,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: split4,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: split3,
+            },
+          },
+        },
+      ],
+    },
+  },
+
+  {
+    sys: {
       id: '5',
     },
     fields: {
       name: 'super mario apartment',
-      slug: 'apartmentSuperMario',
-      type: 'double-basic',
+      slug: 'super-mario',
+      type: 'studio',
       price: 35,
       size: 25,
       capacity: 4,

@@ -40,13 +40,17 @@ class ApartmentProvider extends Component {
 
   getApartment = (slug) => {
     let tempApts = [...this.state.apartments];
+
     const apartment = tempApts.find((apt) => apt.slug === slug);
+
     return apartment;
   };
 
   render() {
     return (
-      <ApartmentContext.Provider value={{ ...this.state }}>
+      <ApartmentContext.Provider
+        value={{ ...this.state, getApartment: this.getApartment }}
+      >
         {this.props.children}
       </ApartmentContext.Provider>
     );
