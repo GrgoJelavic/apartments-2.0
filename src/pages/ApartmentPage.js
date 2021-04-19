@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import defaultBcg from '../images/split-1.jpg';
-import Hero from '../components/Hero/Hero';
 import Banner from '../components/Banner/Banner';
 import { Link } from 'react-router-dom';
 import { ApartmentContext } from '../Context/Context';
@@ -44,12 +43,13 @@ export default class ApartmentPage extends Component {
       price,
       bedroomsNo,
       bedsNo,
-      bathsNo1,
+      bathsNo,
       pets,
       breakfast,
-      featured,
+      extras,
       images,
       type,
+      parking,
     } = apartment;
 
     const [mainImg, ...defaultImgs] = images;
@@ -82,8 +82,22 @@ export default class ApartmentPage extends Component {
               <h6>
                 max capacity : {capacity > 1 ? `${capacity} people` : `person`}{' '}
               </h6>
+              <h6>
+                bedrooms : {bedroomsNo} / beds : {bedsNo} / baths : {bathsNo}
+              </h6>
+              <h6>{pets ? 'pets allowed' : ''}</h6>
+              <h6>{parking ? 'free parking' : 'street parking'}</h6>
+              <h6>{breakfast && 'free breakfast included'}</h6>
             </article>
           </div>
+        </section>
+        <section className='apartment-extras'>
+          <h6>extras</h6>
+          <ul className='extras'>
+            {extras.map((item, index) => {
+              return <li key={index}>- {item} </li>;
+            })}
+          </ul>
         </section>
       </>
     );

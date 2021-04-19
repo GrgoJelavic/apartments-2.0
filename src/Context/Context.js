@@ -59,4 +59,14 @@ class ApartmentProvider extends Component {
 
 const ApartmentConsumer = ApartmentContext.Consumer;
 
+export function withApartmentConsumer(Component) {
+  return function consumerWrapper(props) {
+    return (
+      <ApartmentConsumer>
+        {(value) => <Component {...props} context={value} />}
+      </ApartmentConsumer>
+    );
+  };
+}
+
 export { ApartmentProvider, ApartmentConsumer, ApartmentContext };
