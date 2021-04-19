@@ -30,7 +30,7 @@ export default class Services extends Component {
       },
       {
         icon: <FaUmbrellaBeach />,
-        title: 'beach equipment',
+        title: 'private tours',
         info:
           'Lorem ipsus moment odas da safe, plei asento di mare po ki dinare vici veneto spalato.',
       },
