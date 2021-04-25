@@ -45,7 +45,6 @@ export default class ApartmentPage extends Component {
       bedsNo,
       bathsNo,
       pets,
-      breakfast,
       extras,
       images,
       type,
@@ -87,7 +86,6 @@ export default class ApartmentPage extends Component {
               </h6>
               <h6>{pets ? 'pets allowed' : ''}</h6>
               <h6>{parking ? 'free parking' : 'street parking'}</h6>
-              <h6>{breakfast && 'free breakfast included'}</h6>
             </article>
           </div>
         </section>

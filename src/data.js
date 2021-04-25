@@ -1,11 +1,10 @@
 import mainBM from './images/apartments/bellaMare1.jpg';
+import mainSM from './images/apartments/superMario1.jpg';
 import mainP from './images/apartments/pomalo1.jpg';
-
+import mainKV from './images/apartments/kings2.jpg';
 import split2 from './images/apartments/kings1.jpg';
 import split4 from './images/split-4.jpg';
 import split3 from './images/split-3.jpg';
-
-import mainKV from './images/apartments/kings2.jpg';
 
 const data = [
   {
@@ -23,7 +22,6 @@ const data = [
       bedsNo: 2,
       bathsNo: 1,
       pets: false,
-      breakfast: true,
       parking: false,
       featured: true,
       description:
@@ -77,7 +75,7 @@ const data = [
     fields: {
       name: 'apartment pomalo',
       slug: 'pomalo',
-      type: 'family one bedroom',
+      type: 'one bedroom',
       price: 50,
       size: 55,
       capacity: 5,
@@ -85,7 +83,6 @@ const data = [
       bedsNo: 2,
       bathsNo: 1,
       pets: true,
-      breakfast: true,
       featured: true,
       description:
         'Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamcatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.',
@@ -145,7 +142,6 @@ const data = [
       bedsNo: 2,
       bathsNo: 1,
       pets: false,
-      breakfast: true,
       parking: false,
       featured: true,
       description:
@@ -193,12 +189,12 @@ const data = [
   },
   {
     sys: {
-      id: '4',
+      id: '5',
     },
     fields: {
       name: 'duplex apartment',
       slug: 'duplex',
-      type: 'double-studio',
+      type: 'duplex',
       price: 80,
       size: 60,
       capacity: 8,
@@ -206,7 +202,6 @@ const data = [
       bedsNo: 4,
       bathsNo: 2,
       pets: false,
-      breakfast: true,
       parking: false,
       featured: false,
       description:
@@ -224,7 +219,7 @@ const data = [
         {
           fields: {
             file: {
-              url: split3,
+              url: split4,
             },
           },
         },
@@ -255,7 +250,7 @@ const data = [
 
   {
     sys: {
-      id: '5',
+      id: '4',
     },
     fields: {
       name: 'super mario apartment',
@@ -268,7 +263,6 @@ const data = [
       bedsNo: 2,
       bathsNo: 1,
       pets: false,
-      breakfast: true,
       parking: false,
       featured: false,
       description:
@@ -286,7 +280,7 @@ const data = [
         {
           fields: {
             file: {
-              url: mainP,
+              url: mainSM,
             },
           },
         },
