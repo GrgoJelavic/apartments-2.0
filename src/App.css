@@ -448,10 +448,10 @@ h6 {
 }
 /* end of single apartment - ApartmentPage*/
 /* apartmentlist */
-.apartmentslist {
+.apartmentsList {
   padding: 5rem 0;
 }
-.apartmentslist-center {
+.apartmentsList-center {
   width: 80vw;
   margin: 0 auto;
   display: grid;

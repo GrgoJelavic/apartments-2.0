@@ -11,8 +11,8 @@ export default function AptList({ apartments }) {
   }
 
   return (
-    <section className='apartmentslist'>
-      <div className='apartmentslist-center'>
+    <section className='apartmentsList'>
+      <div className='apartmentsList-center'>
         {apartments.map((item) => {
           return <Apartment key={item.id} apartment={item} />;
         })}
