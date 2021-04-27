@@ -39,6 +39,7 @@ class ApartmentProvider extends Component {
       loading: false,
       price: maxPrice,
       maxPrice,
+      maxSize,
     });
   }
 
@@ -63,9 +64,10 @@ class ApartmentProvider extends Component {
 
   handleChange = (event) => {
     const target = event.target;
-    const value = event.type === 'checkbox' ? target.checked : target.value;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
     const name = event.target.name;
 
+    console.log(target, value, target.type);
     this.setState({ [name]: value }, this.filterApartments);
   };
 
@@ -93,10 +95,24 @@ class ApartmentProvider extends Component {
       tempApartments = tempApartments.filter((apt) => apt.type === type);
 
     //filter by capacity
-    tempApartments = tempApartments.filter((apt) => apt.capacity >= capacity);
+    if (capacity !== 1)
+      tempApartments = tempApartments.filter((apt) => apt.capacity >= capacity);
 
     // filter by price
-    tempApartments = tempApartments.filter((apt) => apt.price < price);
+    tempApartments = tempApartments.filter((apt) => apt.price <= price);
+
+    //filter by size
+    tempApartments = tempApartments.filter(
+      (apt) => apt.size >= minSize && apt.size <= maxSize
+    );
+
+    // filter by parking
+    if (parking)
+      tempApartments = tempApartments.filter((apt) => apt.parking === true);
+
+    // filter by pets
+    if (pets)
+      tempApartments = tempApartments.filter((apt) => apt.pets === true);
 
     // change state
     this.setState({ sortedApts: tempApartments });

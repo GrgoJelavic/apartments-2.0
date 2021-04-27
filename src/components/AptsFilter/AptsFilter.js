@@ -2,6 +2,7 @@ import React from 'react';
 import { useContext } from 'react';
 import { ApartmentContext } from '../../Context/Context';
 import Title from '../../components/Title/Title';
+
 // get all unique values
 const getUnique = (items, value) => {
   return [...new Set(items.map((item) => item[value]))];
@@ -19,7 +20,6 @@ export default function AptFilter({ apartments }) {
     maxPrice,
     minSize,
     maxSize,
-    breakfast,
     parking,
     pets,
   } = context;
@@ -92,7 +92,57 @@ export default function AptFilter({ apartments }) {
             onChange={handleChange}
           />
         </div>
-        {/*end of price*/}
+        {/*end of select price */}
+        {/*select size*/}
+        <div className='form-group'>
+          <label htmlFor='size'>Apartment size: m²</label>
+          <div className='size-inputs'>
+            <input
+              className='size-input'
+              type='number'
+              name='minSize'
+              value={minSize}
+              id='size'
+              onChange={handleChange}
+              min='0'
+            />
+            <input
+              className='size-input'
+              type='number'
+              name='maxSize'
+              value={maxSize}
+              id='size'
+              onChange={handleChange}
+              min='0'
+            />
+          </div>
+        </div>
+        {/*end of select size*/}
+        {/*select extras*/}
+        <div className='form-group'>
+          <div className='single-extra'>
+            <input
+              type='checkbox'
+              name='parking'
+              id='parking'
+              checked={parking}
+              onChange={handleChange}
+            />
+            <label htmlFor='parking'>parking</label>
+          </div>
+
+          <div className='single-extra'>
+            <input
+              type='checkbox'
+              name='pets'
+              id='pets'
+              checked={pets}
+              onChange={handleChange}
+            />
+            <label htmlFor='pets'>pets</label>
+          </div>
+        </div>
+        {/*end of select extras */}
       </form>
     </section>
   );
