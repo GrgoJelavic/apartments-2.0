@@ -21,7 +21,7 @@ const data = [
       bedroomsNo: 1,
       bedsNo: 2,
       bathsNo: 1,
-      pets: false,
+      pets: true,
       parking: false,
       featured: true,
       description:
@@ -142,7 +142,7 @@ const data = [
       bedsNo: 2,
       bathsNo: 1,
       pets: false,
-      parking: false,
+      parking: true,
       featured: true,
       description:
         'Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamcatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.',
@@ -189,20 +189,81 @@ const data = [
   },
   {
     sys: {
+      id: '4',
+    },
+    fields: {
+      name: 'super mario apartment',
+      slug: 'super-mario',
+      type: 'studio',
+      price: 35,
+      size: 25,
+      capacity: 4,
+      bedroomsNo: 1,
+      bedsNo: 2,
+      bathsNo: 1,
+      pets: false,
+      parking: true,
+      featured: false,
+      description:
+        'Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamcatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.',
+      extras: [
+        'Plush pillows and breathable bed linens',
+        'Soft, oversized bath towels',
+        'Full-sized, pH-balanced toiletries',
+        'Complimentary refreshments',
+        'Adequate safety/security',
+        'Internet',
+        'Comfortable beds',
+      ],
+      images: [
+        {
+          fields: {
+            file: {
+              url: mainSM,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: split2,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: split4,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: split3,
+            },
+          },
+        },
+      ],
+    },
+  },
+
+  {
+    sys: {
       id: '5',
     },
     fields: {
-      name: 'duplex apartment',
+      name: 'Duplex apartment',
       slug: 'duplex',
       type: 'duplex',
       price: 80,
       size: 60,
       capacity: 8,
-      bedroomsNo: 2,
-      bedsNo: 4,
+      bedroomsNo: 4,
+      bedsNo: 2,
       bathsNo: 2,
-      pets: false,
-      parking: false,
+      pets: true,
+      parking: true,
       featured: false,
       description:
         'Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamcatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.',
@@ -250,20 +311,20 @@ const data = [
 
   {
     sys: {
-      id: '4',
+      id: '7',
     },
     fields: {
-      name: 'super mario apartment',
-      slug: 'super-mario',
-      type: 'studio',
-      price: 35,
-      size: 25,
-      capacity: 4,
-      bedroomsNo: 1,
-      bedsNo: 2,
-      bathsNo: 1,
+      name: 'Test apartment',
+      slug: 'test',
+      type: 'duplex',
+      price: 200,
+      size: 200,
+      capacity: 8,
+      bedroomsNo: 3,
+      bedsNo: 6,
+      bathsNo: 4,
       pets: false,
-      parking: false,
+      parking: true,
       featured: false,
       description:
         'Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamcatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.',
@@ -280,7 +341,7 @@ const data = [
         {
           fields: {
             file: {
-              url: mainSM,
+              url: split2,
             },
           },
         },
