@@ -4,6 +4,7 @@ import Banner from '../components/Banner/Banner';
 import { Link } from 'react-router-dom';
 import Services from '../components/Services/Services';
 import FeaturedApts from '../components/FeaturedApts/FeaturedApts';
+import Footer from '../components/Footer/Footer';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       </Hero>
       <FeaturedApts />
       <Services />
+      <Footer />
     </>
   );
 }

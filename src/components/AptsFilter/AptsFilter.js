@@ -65,7 +65,7 @@ export default function AptFilter({ apartments }) {
         {/*end of select type*/}
         {/*select guests*/}
         <div className='form-group'>
-          <label htmlFor='capacity'>Number of guests: {capacity} </label>
+          <label htmlFor='capacity'>Guests: {capacity} </label>
           <input
             type='range'
             name='capacity'
@@ -80,7 +80,7 @@ export default function AptFilter({ apartments }) {
         {/*end of select guests*/}
         {/*select price*/}
         <div className='form-group'>
-          <label htmlFor='price'>Price per night: {price}€ </label>
+          <label htmlFor='price'>Nightly rate: {price}€ </label>
           <input
             type='range'
             name='price'
@@ -95,7 +95,7 @@ export default function AptFilter({ apartments }) {
         {/*end of select price */}
         {/*select size*/}
         <div className='form-group'>
-          <label htmlFor='size'>Apartment size: m²</label>
+          <label htmlFor='size'>Size (m²)</label>
           <div className='size-inputs'>
             <input
               className='size-input'
