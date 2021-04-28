@@ -44,6 +44,7 @@ export default class ApartmentPage extends Component {
       bedroomsNo,
       bedsNo,
       bathsNo,
+      kitchen,
       pets,
       extras,
       images,
@@ -81,11 +82,12 @@ export default class ApartmentPage extends Component {
               <h6>
                 max capacity : {capacity > 1 ? `${capacity} people` : `person`}{' '}
               </h6>
-              <h6>
-                bedrooms : {bedroomsNo} / beds : {bedsNo} / baths : {bathsNo}
-              </h6>
-              <h6>{pets ? 'pets allowed' : ''}</h6>
+              <h6>bedrooms : {bedroomsNo}</h6>
+              <h6>beds : {bedsNo}</h6>
+              <h6>baths : {bathsNo}</h6>
+              <h6>{kitchen ? 'furnished kitchen' : ''}</h6>
               <h6>{parking ? 'free parking' : 'street parking'}</h6>
+              <h6>{pets ? 'pets allowed' : ''}</h6>
             </article>
           </div>
         </section>
