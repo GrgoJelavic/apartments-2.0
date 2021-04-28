@@ -12,7 +12,6 @@ export default function Apartment({ apartment }) {
     capacity,
     bedroomsNo,
     bedsNo,
-    bathsNo,
     size,
   } = apartment;
 
@@ -30,10 +29,10 @@ export default function Apartment({ apartment }) {
         </Link>
       </div>
       <div className='apartment-info'>
-        {name}
+        <h6>{name}</h6>
+        <p>{capacity} guests</p>
         <p>
-          {capacity} guests - {bedroomsNo} bedroom - {bedsNo} beds - {bathsNo}{' '}
-          bath
+          {bedroomsNo} bedroom - {bedsNo} beds
         </p>
         <p>size: {size} m2</p>
       </div>

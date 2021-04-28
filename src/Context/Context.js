@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
-import items from '../data';
+//import items from '../data';
+import Client from '../Contentful';
+Client.getEntries({ content_type: 'apartment' }).then((response) =>
+  console.log(response.items)
+);
 
 const ApartmentContext = React.createContext();
 
@@ -21,26 +25,37 @@ class ApartmentProvider extends Component {
   };
 
   // getData
+  getData = async () => {
+    try {
+      let response = await Client.getEntries({
+        content_type: 'apartment',
+        //order: 'sys.createdAt',
+        order: 'fields.price',
+      });
+      let apartments = this.formatData(response.items);
+
+      let featuredApts = apartments.filter((apt) => apt.featured === true);
+
+      let maxPrice = Math.max(...apartments.map((item) => item.price));
+
+      let maxSize = Math.max(...apartments.map((item) => item.size));
+
+      this.setState({
+        apartments,
+        featuredApts,
+        sortedApts: apartments,
+        loading: false,
+        price: maxPrice,
+        maxPrice,
+        maxSize,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   componentDidMount() {
-    // this.getData
-    let apartments = this.formatData(items);
-
-    let featuredApts = apartments.filter((apt) => apt.featured === true);
-
-    let maxPrice = Math.max(...apartments.map((item) => item.price));
-
-    let maxSize = Math.max(...apartments.map((item) => item.size));
-
-    this.setState({
-      apartments,
-      featuredApts,
-      sortedApts: apartments,
-      loading: false,
-      price: maxPrice,
-      maxPrice,
-      maxSize,
-    });
+    this.getData();
   }
 
   formatData(items) {
