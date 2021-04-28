@@ -79,8 +79,8 @@ class ApartmentProvider extends Component {
       price,
       minSize,
       maxSize,
-      minPrice,
-      maxPrice,
+      // minPrice,
+      // maxPrice,
       parking,
       pets,
     } = this.state;
